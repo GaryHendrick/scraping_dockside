@@ -19,4 +19,5 @@ ENV PYTHONUNBUFFERED 1
 
 COPY . .
 
+
 CMD ["python", "scraping.py"]
