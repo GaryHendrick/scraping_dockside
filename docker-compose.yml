@@ -1,6 +1,6 @@
 version: '3'
 services:
   scrapy:
-    image: ghendrick/scrapingdockside_scrapy:0.1.1
+    image: ghendrick/scrapingdockside_scrapy:0.2.1
     volumes:
       - .:/usr/src/app

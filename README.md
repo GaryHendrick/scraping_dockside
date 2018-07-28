@@ -10,3 +10,10 @@ Install docker compose https://docs.docker.com/compose/install/
 
 run `docker-compose up`
 
+## Docker notes
+This directory represents the docker build context root directory
+
+the `.dockerignore` file excludes files which might otherwise be copied
+
+I've included an environment variable "version" to control the version label within the image.  I'd hope that this is kept in line with the tag used to build the Dockerfile
+

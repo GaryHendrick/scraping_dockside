@@ -1,5 +1,12 @@
 FROM python:3.7.0-alpine
 
+ENV version="0.2.2"
+
+# seriously, if you have tips, don't be shy
+LABEL maintainter="Gary Hendrick<gary.hendrick@gmail.com>"\
+ version="${version}"\
+ description="This image is used to start a basic scrapy build environment"
+
 RUN apk update && \
 	apk add --virtual \
 		build-dependencies \
@@ -19,5 +26,6 @@ ENV PYTHONUNBUFFERED 1
 
 COPY . .
 
+RUN scrapy startproject exemplar
 
 CMD ["python", "scraping.py"]
