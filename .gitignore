@@ -106,3 +106,7 @@ venv.bak/
 # intellij
 .idea/**/*
 
+# vim
+*.swp
+*.swo
+

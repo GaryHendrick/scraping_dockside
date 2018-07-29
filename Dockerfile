@@ -18,11 +18,11 @@ RUN pip install -r requirements.txt
 RUN scrapy bench
  
 ENV PYTHONUNBUFFERED 1
-ENV version="1.0.1"
+ENV version="1.0.2"
 
 # seriously, if you have tips, don't be shy
 LABEL maintainter="Gary Hendrick<gary.hendrick@gmail.com>"\
  version="${version}"\
  description="This image is used to start a basic scrapy build environment"
 
-CMD ["environmentals.sh"]
+CMD ["./environmentals.sh"]

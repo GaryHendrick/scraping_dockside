@@ -1,6 +1,11 @@
-version: '3'
+version: "3.2"
 services:
   scrapy:
-    image: ghendrick/scrapingdockside_scrapy:1.0.1
+    image: ghendrick/scrapingdockside_scrapy:1.0.2
     volumes:
-      - .:/usr/src/app
+      - type: bind
+        source: .
+        target: /usr/src/app
+    environment:
+      - PROJECT_NAME=${PROJECT_NAME}
+      - USER_ID=${UID}
