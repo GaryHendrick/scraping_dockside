@@ -1,4 +1,4 @@
-FROM python:3.7.0-alpine
+FROM python:3.6.6-alpine
 
 RUN apk update && \
 	apk add --virtual\
@@ -13,10 +13,12 @@ VOLUME /usr/src/app
 WORKDIR /usr/src/app
 
 COPY ./requirements.txt .
-run pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
+RUN scrapy bench
+ 
 ENV PYTHONUNBUFFERED 1
-ENV version="0.2.3"
+ENV version="1.0.1"
 
 # seriously, if you have tips, don't be shy
 LABEL maintainter="Gary Hendrick<gary.hendrick@gmail.com>"\
