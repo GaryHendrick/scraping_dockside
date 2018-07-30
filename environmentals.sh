@@ -1,7 +1,5 @@
 #!/bin/sh
 echo "Setting up the environmentals for the scraping dockside application"
-echo "The following environmental variables are carried over by docker"
-echo "The UID of this user is ${UID} the UID of the user from the host is ${USER_ID}"
 
 if [ ! $PROJECT_NAME ] ; then
         PROJECT_NAME=exemplar
