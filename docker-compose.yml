@@ -1,8 +1,9 @@
 version: "3.2"
 services:
   scraper:
-    image: ghendrick/scrapingdockside_scrapy:1.0.2
+    image: ghendrick/scrapingdockside_scrapy:1.0.3
     volumes:
       - .:/usr/src/app
     environment:
       - PROJECT_NAME=${PROJECT_NAME}
+    command: python scraping.py
